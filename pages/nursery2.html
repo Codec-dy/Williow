@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Willows Administrator</title>
+    <link rel="stylesheet" href="admit.css">
+    <link rel="stylesheet" href="../font-awe/css/all.css">
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+</head>
+    <body>
+        <div class="header">
+            <span class="net" style="font-size: 2rem;">
+                <a href="../index.html"><i class="fas fa-school"></i></a>
+            </span>
+            <h1>KG1</h1>
+        </div>
+        <div id="nav">
+            <div class="btnclass">
+                <button type="button" value="Back" onclick="history.go(-1)">Back</button>
+                <input type="text" id="admno" placeholder="AdmNo.">
+                <button id="save" onclick="add()">Save</button>
+                <a href="nursery1_list.html"><button>nursery1 Entry</button></a>
+                <a href="kg1.html"><button>Kg1 Data</button></a>
+                <a href="kg2.html"><button>Kg2</button></a>
+                <a href="Class1.html"><button>Class1</button></a>
+                <a href="Class2.html"><button>Class2</button></a>
+                <a href=""><button>Class3</button></a>
+                <a href=""><button>Class4</button></a>
+                <a href=""><button>Class5</button></a>
+                <a href=""><button>Class6</button></a>
+            </div>
+        </div>
+        <div id="inData">
+<!--   student form data     -->
+            <div class="formDes">
+                <form class="StudForm">
+                        <label for="doa">Date On Admission</label>
+                        <input type="date" id="doa">
+                        <input type="text" id="name" placeholder="Full Name">
+                        <input type="number" id="age" placeholder="Age On Adm">
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" id="dob">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                </form>
+                </div>
+
+        <!--  students Parent data      -->
+                <div class="formDes">
+                    <form class="ParentForm">
+                        <input type="text" id="father" placeholder="Father">
+                        <input type="text" id="mother" placeholder="Mother">
+                        <input type="text" id="relationship" placeholder="Relationship">
+                        <input type="text" id="father_job" placeholder="Father's Occupation">
+                        <input type="text" id="mother_job" placeholder="Mother's Occupation">
+                    </form>
+                </div>
+
+        <!--  students Location data  -->
+                <div class="formDes">
+                    <form class="LocationForm">
+                        <input type="number" id="father_no" placeholder="Father's number">
+                        <input type="number" id="mother_no" placeholder="Mother's number">
+                        <input type="text" id="guardian" placeholder="Guardian">
+                        <input id="guardian_no" type="number" placeholder="Guardian's No.">
+                        <input type="text" id="guardianOcc" placeholder="Guardian Occupation">
+                    </form>
+                </div>
+                <div class="formDes">
+                    <form class="LocationForm">
+                        <input type="text" id="NHIS" placeholder="NHIS">
+                        <input type="text" id="Digi" placeholder="Digital Address">
+                        <input type="number" id="plt" placeholder="PLT">
+                        <input type="text" id="blk" placeholder="BLK">
+                        <input type="text" id="area" placeholder="Area">
+                    </form>
+                </div>
+
+            </div>
+        <script src="../DB/db.js"></script>
+<!--        <script src="../DB/ddb.js"></script>-->
+    </body>
+</html>

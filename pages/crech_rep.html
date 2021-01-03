@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Willows Administrator</title>
+    <link rel="stylesheet" href="admit.css">
+    <!-- <link rel="stylesheet" href="print.css" type="text/css"/> -->
+    <link rel="stylesheet" href="../font-awe/css/all.css">
+    <script src="../jquery.js"></script>
+</head>
+    <body>
+        <div class="header">
+            <span class="net" style="font-size: 2rem;">
+                <a href="../index.html"><i class="fas fa-school"></i></a>
+            </span>
+            <h1>Creche</h1>
+        </div>
+        <div id="nav">
+            <div class="btnclass">
+                <button type="button" value="Back" onclick="history.go(-1)">Back</button>            
+                <button type="button" onclick="printDiv();">Print</button>
+                    <a href="crech_rep.html"><button onclick="info()">Preview Class</button o></a>
+            <select id="classP">
+               <option value="">--Select Class to Preview--</option>
+                <option value="Nursury1"><a href="nursery1.html"><button>Nursury1</button></a></option>
+                <option value="Nursury2"><a href="nursery2.html"><button>Nursury2</button></a></option>
+                <option value="Primary1"><a href="Class1.html"><button>Class1</button></a></option>
+                <option value="Primary2"><a href="Class2.html"><button>Class2</button></a></option>
+                <option value="Primary3"><a href="Class3.html"><button>Class3</button></a></option>
+                <option value="Primary4"><a href="Class4.html"><button>Class4</button></a></option>
+                <option value="Primary5"><a href="Class5.html"><button>Class5</button></a></option>
+                <option value="Primary6"><a href="Class6.html"><button>Class6</button></a></option>
+                <option value="JHS1"><a href="kg1.html"><button>JHS 1</button></a></option>
+                <option value="JHS2"><a href="kg2.html"><button>JHS 2</button></a></option>
+                <option value="JHS3"><a href="kg2.html"><button>JHS 3</button></a></option>
+            </select>
+            </div>
+        </div>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <div class="tb" id="stdata">
+          <div id="tablename"><h1>Creche</h1></div>
+          <div id="innert">
+          <table id="nowE" class="tablePre">
+            <tbody>
+            <tr>
+                <th>Adm_No</th>
+                <th>DateOnAdm</th>
+                <th>Name</th>
+                <th>DateOfBirth</th>
+                <th>Gender</th>
+                <th>NHIS</th>
+                <th>Area</th>
+                <th>PLT</th>
+                <th>BLK</th>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+        
+        <!--        <script src="../DB/db.js"></script>-->
+        <script src="searchindex.js"></script>
+        <script src="printdata.js"></script>
+        <script src="../DB/ddb.js"></script>
+
+    </body>
+</html>

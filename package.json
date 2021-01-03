@@ -1,0 +1,20 @@
+{
+  "name": "williows",
+  "version": "1.0.0",
+  "description": "Custom school manager made for willows",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "@nirdteq/Prof Nird",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.2.0"
+  },
+  "dependencies": {
+    "electron-db": "^0.15.7",
+    "electron-reload": "^1.5.0",
+    "jquery": "^3.5.1",
+    "node-notifier": "^8.0.0"
+  }
+}
