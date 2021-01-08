@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="admit.css">
     <!-- <link rel="stylesheet" href="print.css" type="text/css"/> -->
     <link rel="stylesheet" href="../font-awe/css/all.css">
+    <link href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <script src="../jquery.js"></script>
 </head>
     <body>
@@ -39,10 +40,15 @@
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
         <div class="tb" id="stdata">
           <div id="tablename"><h1>Creche</h1></div>
+          <div >
+              <button id="edit" class="btn btn-primary">Edit</button>
+              <button id="delete" class="btn btn-primary">Delete</button>
+          </div>
           <div id="innert">
           <table id="nowE" class="tablePre">
             <tbody>
             <tr>
+                <th>Select</th>
                 <th>Adm_No</th>
                 <th>DateOnAdm</th>
                 <th>Name</th>
@@ -59,9 +65,51 @@
         </div>
         
         <!--        <script src="../DB/db.js"></script>-->
-        <script src="searchindex.js"></script>
-        <script src="printdata.js"></script>
-        <script src="../DB/ddb.js"></script>
-
-    </body>
+        <div class="cover"></div>
+        <div id="personal">
+            <h3>Information</h3><hr>
+            <div id="img">
+                <img src="../img/index1.png" id="immg">
+    <button onclick="printInfo()" id="print">Print</button>
+    <button id="editt">Edit</button>
+    <a href="" id="down" download="passport">Dowload</a>
+</div>
+<div id="info">
+    <div><span>Full Name:</span><span id="gNam"></span></div>
+    <div><span>Gender:</span><span id="gGender"></span></div>
+    <div><span>Father Name:</span><span id="gFath"></span></div>
+    <div><span>Mother Name:</span><span id="gMoth"></span></div>
+    <div><span>Date of Birth:</span><span id="gDOB"></span></div>
+    <div><span>Class:</span><span id="gClas"></span></div>
+<div><span>Admission Date:</span><span id="gDOA"></span></div>
+<div><span>Father's Contact:</span><span id="gfathNumb"></span></div>
+<div><span>Mother's Contact:</span><span id="gmothNumb"></span></div>
+<div><span>NHIS:</span><span id="gNHIS"></span></div>
+<div><span>Digital Address:</span><span id="gDigital"></span></div>
+<div><span>PLT:</span><span id="gPLT"></span></div>
+<div><span>BLK:</span><span id="gBLK"></span></div>
+<div><span>Area:</span><span id="gArea"></span></div>
+</div>
+<div id="info1">
+<div><span>Full Name:</span><input id="eNam" type="text"></div>
+<div><span>Gender:</span><input id="eGender" type="text"></div>
+<div><span>Father Name:</span><input id="eFath" type="text"></div>
+<div><span>Mother Name:</span><input id="eMoth" type="text"></div>
+<div><span>Date of Birth:</span><input id="eDOB" type="text"></div>
+<div><span>Class:</span><input id="eClas" type="text"></div>
+<div><span>Admission Date:</span><input id="eDOA" type="text"></div>
+<div><span>Father's Contact:</span><input id="efathNumb" type="text"></div>
+<div><span>Mother's Contact:</span><input id="emothNumb" type="text"></div>
+<div><span>NHIS:</span><input id="eNHIS" type="text"></div>
+<div><span>Digital Address:</span><input id="eDigital" type="text"></div>
+<div><span>PLT:</span><input id="ePLT" type="text"></div>
+<div><span>BLK:</span><input id="eBLK" type="text"></div>
+<div><span>Area:</span><input id="eArea" type="text"></div>
+</div>
+</div>
+<script src="searchindex.js"></script>
+<script src="printdata.js"></script>
+<script src="../DB/ddb.js"></script>
+</body>
 </html>
+
