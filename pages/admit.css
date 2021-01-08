@@ -1,102 +1,103 @@
-body,html{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 /* header */
-.header{
-    background: blue;
-    padding: 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.header {
+  background: blue;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.header a{
-    color:white;
-}
-
-#save{
-    border: 2px solid white;
-    background-color: orangered;
-    color: white;
-    box-shadow: 0px 30px 0px 0px;
-}
-#nav{
-    display: flex;
-    background-color: #2a3eca;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-}
-button{
-    background: white;
-    border: none;
-    padding: 10px;
+.header a {
+  color: white;
 }
 
-.btnclass button:hover{
-    background-color: black;
-    color: white;
+#save {
+  border: 2px solid white;
+  background-color: orangered;
+  color: white;
+  box-shadow: 0px 30px 0px 0px;
 }
-#nav a{
-    text-decoration: none;
-    background-color: aqua;
+#nav {
+  display: flex;
+  background-color: #2a3eca;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
-.net{
-    border:1px solid;
-    padding: 20px;
-    margin: 10px;
-}
-
-#inData{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-#classS{
-    height: 40px;
-    width:90%
+button {
+  background: white;
+  border: none;
+  padding: 10px;
 }
 
-.formDes{
-    text-align: center;
+.btnclass button:hover {
+  background-color: black;
+  color: white;
+}
+#nav a {
+  text-decoration: none;
+  background-color: aqua;
+}
+.net {
+  border: 1px solid;
+  padding: 20px;
+  margin: 10px;
+}
+
+#inData {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#classS {
+  height: 40px;
+  width: 90%;
+}
+
+.formDes {
+  text-align: center;
   background-color: #2a3eca;
   color: white;
-    display: flex;
-    margin: 10px;
-    padding: 30px;
-    border-radius: 30px;
-    justify-content: center;
-    width: 200px;
-    max-height: 900opx;
-    flex-wrap: wrap;
+  display: flex;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 30px;
+  justify-content: center;
+  width: 200px;
+  max-height: 900opx;
+  flex-wrap: wrap;
 }
 
-
-input,#classS{
-    padding: 10px;
-    margin: 10px;
-    width: 190px;
+input,
+#classS {
+  padding: 10px;
+  margin: 10px;
+  width: 190px;
 }
-label{
-    margin: 10px;
+label {
+  margin: 10px;
 }
 
 /*================== preview table =============== */
-.tb{
+.tb {
   /* border: 3px solid; */
   border-radius: 10px;
   display: flex;
@@ -105,39 +106,104 @@ label{
   /* width: 100vw; */
   margin-left: 30px;
   margin-right: 30px;
-
 }
-#innert{
+#innert {
   overflow: auto;
 }
-table{
-   width: 100%;
-/*    display: flex;*/
-    justify-content: center;
-    align-content: center;
-    font-size: 14px;
-/*    white-space: nowrap;*/
+table {
+  width: 100%;
+  /*    display: flex;*/
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  /*    white-space: nowrap;*/
 }
-table td{
-    /* width: 100%; */
-    border-top: 1px solid;
-    background: #004953;
-    padding: 10px;
-    text-align: center;
-    color: white;
+table td {
+  /* width: 100%; */
+  border-top: 1px solid;
+  background: #004953;
+  padding: 10px;
+  text-align: center;
+  color: white;
 }
-table td:hover{
-    background: #008b8b;
-    transition-duration: 0.4s;
+table td:hover {
+  background: #008b8b;
+  transition-duration: 0.4s;
 }
-table th{
-    font-weight: 900;
-    color: #ffffff;
-    background: #ea6153;
-    padding: 10px;
+table th {
+  font-weight: 900;
+  color: #ffffff;
+  background: #ea6153;
+  padding: 10px;
 }
-table { border-collapse:collapse; }
+table {
+  border-collapse: collapse;
+}
+.cover {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.5;
+  transition: 0.4s;
+  display: none;
+}
+#personal {
+  padding: 10px;
+  background: white;
+  width: 70%;
+  height: 90vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  transition: 0.4s;
+  display: none;
+}
+#info,
+#info1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  right: 10px;
+  justify-content: space-between;
+  height: 70%;
+}
+#info div,
+#info1 div {
+  display: flex;
+  align-items: center;
+  height: 33px;
+}
+#info div span {
+  flex: 1;
+}
+#info1 div span {
+  flex: 1;
+}
+#info1 div input {
+  flex: 1;
+  height: 1px;
+}
 
+#img {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+}
+#img img {
+  width: 100%;
+  height: 100%;
+}
+.select {
+  width: auto;
+}
+#info1 {
+  display: none;
+}
 /* @media screen and (min-width: 800px) {
   table {
     font-size: 16px;
@@ -155,7 +221,7 @@ table { border-collapse:collapse; }
 #myInput {
   /* background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   /* background-position: 10px 12px; /* Position the search icon */
-  /* background-repeat: no-repeat; /* Do not repeat the icon image */ 
+  /* background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 50vw; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
