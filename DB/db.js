@@ -94,7 +94,7 @@ let add = () => {
     var age = document.getElementById('age').value;
     var DOB = document.getElementById('dob').value;
     var gender = document.getElementById('gender').value;
-    
+    var image = document.getElementById("image").files[0];
     //get values
     var fname = document.getElementById('father').value;
     var mname = document.getElementById('mother').value;
@@ -141,7 +141,7 @@ let add = () => {
         Age: age,
         DateOfBirth: DOB,
         Gender: gender,
-        
+        Image: image,
         //parents info
         father: fname,
         mother: mname,
@@ -163,7 +163,7 @@ let add = () => {
         BLK: blk,
         Area: area
     };
-    
+
     //adding
     
     let request2;
