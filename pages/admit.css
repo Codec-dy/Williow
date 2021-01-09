@@ -1,37 +1,40 @@
-body,
-html {
+body,html {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+}
+*{
   box-sizing: border-box;
 }
 
 /* header */
 .header {
+  /* border: 2px solid; */
+  height: 30px;
   background: blue;
   padding: 20px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 .header a {
   color: white;
 }
 
-#save {
+/* #save {
   border: 2px solid white;
   background-color: orangered;
   color: white;
   box-shadow: 0px 30px 0px 0px;
-}
+} */
 #nav {
+  /* border: 2px solid; */
   display: flex;
   background-color: #2a3eca;
   padding: 20px;
@@ -39,16 +42,20 @@ html {
   align-items: center;
   width: 100vw;
 }
+#nav select {
+  border: none;
+  padding: 10px;
+}
 button {
   background: white;
   border: none;
   padding: 10px;
 }
 
-.btnclass button:hover {
+/* .btnclass button:hover {
   background-color: black;
   color: white;
-}
+} */
 #nav a {
   text-decoration: none;
   background-color: aqua;
@@ -58,33 +65,58 @@ button {
   padding: 20px;
   margin: 10px;
 }
-
-#inData {
+.content{
+  display: flex;
   width: 100vw;
   height: 100vh;
+}
+#inData {
+  /* border: 1px solid; */
   display: flex;
+  width: 100%;
+  height: 100%;
+  /* background: grey; */
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+}
+.inputdata{
+  border: 1px solid;
+  margin: 10px;
+  width: 300px;
+  height: 400px;
+}
+.inputdata form{
+  /* border: 1px solid; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+#inData label{
+  font-size: 12px;
 }
 #classS {
   height: 40px;
   width: 90%;
 }
+.studinput{
+  display: flex;
+  flex-direction: column;
+}
 
-.formDes {
+/* .formDes {
   text-align: center;
   background-color: #2a3eca;
   color: white;
   display: flex;
-  margin: 10px;
   padding: 30px;
   border-radius: 30px;
   justify-content: center;
   width: 200px;
-  max-height: 900opx;
-  flex-wrap: wrap;
-}
+  max-height: 900px;
+} */
 
 input,
 #classS {
@@ -93,7 +125,7 @@ input,
   width: 190px;
 }
 label {
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 /*================== preview table =============== */
