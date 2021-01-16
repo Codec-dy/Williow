@@ -28,7 +28,11 @@ request.onrror = (e) =>{
 request.onupgradeneeded = (e) => {
     console.log('Opendata');
     db = e.target.result;
-    let os = db.createObjectStore('Students',{
+    let crech = db.createObjectStore('Creche',{
+        keyPath:'id',
+        autoIncrement:true
+    });
+    let nurseryA = db.createObjectStore('TNursury',{
         keyPath:'id',
         autoIncrement:true
     });
@@ -37,6 +41,10 @@ request.onupgradeneeded = (e) => {
         autoIncrement:true
     });
     let obj_ns2 = db.createObjectStore('Nursury2',{
+        keyPath:'id',
+        autoIncrement:true
+    });
+    let primaryA = db.createObjectStore('TPrimary',{
         keyPath:'id',
         autoIncrement:true
     });
@@ -64,6 +72,10 @@ request.onupgradeneeded = (e) => {
         keyPath:'id',
         autoIncrement:true
     });
+    let jhsA = db.createObjectStore('TJHS',{
+        keyPath:'id',
+        autoIncrement:true
+    });
     let obj_jhs1 = db.createObjectStore('JHS1',{
         keyPath:'id',
         autoIncrement:true
@@ -77,14 +89,11 @@ request.onupgradeneeded = (e) => {
         autoIncrement:true
     });
 };
-localStorage['admNo'] = parseInt(0);
+
 //add 
 let add = () => {
-    localStorage['admNo'] = parseInt(localStorage['admNo'])+1;
     //get values of student
     var clas =document.getElementById('classS').value;
-    var admno = localStorage['admNo']
-    document.getElementById('admNo').innerHTML = "AdmNo: "+ localStorage['admNo'];
     var DOA = new Date();
     var dd = String(DOA.getDate()).padStart(2,"0");
     var mm = String(DOA.getMonth()+1).padStart(2,"0");
@@ -95,6 +104,7 @@ let add = () => {
     var DOB = document.getElementById('dob').value;
     var gender = document.getElementById('gender').value;
     var image = document.getElementById("image").files[0];
+
     //get values
     var fname = document.getElementById('father').value;
     var mname = document.getElementById('mother').value;
@@ -116,26 +126,28 @@ let add = () => {
     var blk = document.getElementById('blk').value;
     var area = document.getElementById('area').value;
     //create transactions
-    var transaction = db.transaction(['Students','JHS3','JHS2','JHS1','Primary6','Primary5','Primary4','Primary3','Primary2','Primary1','Nursury2','Nursury1'], 'readwrite');
+    var transaction = db.transaction(['TJHS','JHS3','JHS2','JHS1','TPrimary','Primary6','Primary5','Primary4','Primary3','Primary2','Primary1',"TNursury",'Nursury2','Nursury1','Creche'], 'readwrite');
     
     //Asking for ObjStore
-    var store = transaction.objectStore('Students');
+    var storec = transaction.objectStore('Creche');
+    var storejT = transaction.objectStore('TJHS');
     var storej3 = transaction.objectStore('JHS3');
     var storej2 = transaction.objectStore('JHS2');
     var storej1 = transaction.objectStore('JHS1');
+    var storepT = transaction.objectStore('TPrimary');
     var storep6 = transaction.objectStore('Primary6');
     var storep5 = transaction.objectStore('Primary5');
     var storep4 = transaction.objectStore('Primary4');
     var storep3 = transaction.objectStore('Primary3');
     var storep2 = transaction.objectStore('Primary2');
     var storep1 = transaction.objectStore('Primary1');
+    var storenT = transaction.objectStore('TNursury');
     var storen2 = transaction.objectStore('Nursury2');
     var storen1 = transaction.objectStore('Nursury1');
     let Info = {
         
         //student's data
         Clas: clas,
-        Adm_No: admno,
         DateOnAdmission: DOA,
         Name: name,
         Age: age,
@@ -169,52 +181,54 @@ let add = () => {
     let request2;
     let request;
     switch (Info.Clas) {
+        case "Creche":
+            request = storec.add(Info)
+            break;
         case "nursery1":
             request2 = storen1.add(Info);
-            request = store.add(Info);
+            request = storenT.add(Info);
             break;
         case "nursery2":
             request2 = storen2.add(Info);
-            request = store.add(Info);
+            request = storenT.add(Info);
             break;
         case "primary1":
             request2 = storep1.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "primary2":
             request2 = storep2.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "primary3":
             request2 = storep3.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "primary4":
             request2 = storep4.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "primary5":
             request2 = storep5.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "primary6":
             request2 = storep6.add(Info);
-            request = store.add(Info);
+            request = storepT.add(Info);
             break;
         case "jhs1":
             request2 = storej1.add(Info);
-            request = store.add(Info);
+            request = storejT.add(Info);
             break;
         case "jhs2":
             request2 = storej2.add(Info);
-            request = store.add(Info);
+            request = storejT.add(Info);
             break;
         case "jhs3":
             request2 = storej3.add(Info);
-            request = store.add(Info);
+            request = storejT.add(Info);
             break;
         default:
-            request = store.add(Info);
             break;
     }
 

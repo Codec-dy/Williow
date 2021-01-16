@@ -37,6 +37,8 @@ request.onsuccess = (event) => {
 
 
 let showStudents = () => {
+    let clasName = document.querySelector("#tablename");
+    clasName.innerHTML=`<h1>${localStorage['pas']}</h1>`
     //seeking objstore
     console.log("test " + db);
     let objectStore;
