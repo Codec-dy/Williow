@@ -1,7 +1,7 @@
-<!-- <!doctype html> -->
+<!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Willows Administrator</title>
     <link rel="stylesheet" href="admit.css">
     <link rel="stylesheet" href="../font-awe/css/all.css">
@@ -9,10 +9,6 @@
         window.$ = window.jQuery = require('jquery');
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- bootstrap v4.5.2 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 
 </head>
     <body>
@@ -20,16 +16,16 @@
             <span class="net" style="font-size: 2rem;">
                 <a href="../index.html"><i class="fas fa-school"></i></a>
             </span>
-            <h3>Admit</h3>
-            <!-- <button type="button" name="button">me</button> -->
+            <h1>Creche</h1>
         </div>
         <div id="nav">
             <div class="btnclass">
                 <span id="admNo"></span>
-                <button id="save" class="btn btn-primary" onclick="add()">Save</button>
+                <button id="save" onclick="add()">Save</button>
                 <a href="crech_rep.html"><button onclick="info()">Preview Class</button o></a>
             <select id="classP">
                 <option value="">--Select Class to Preview--</option>
+                <option value="Creche">Creche</option>
                 <option value="Nursury1"><a href="nursery1.html"><button>Nursury1</button></a></option>
                 <option value="nursury2"><a href="nursery2.html"><button>Nursury2</button></a></option>
                 <option value="Primary1"><a href="Class1.html"><button>Class1</button></a></option>
@@ -41,84 +37,79 @@
                 <option value="JHS1"><a href="kg1.html"><button>JHS 1</button></a></option>
                 <option value="JHS2"><a href="kg2.html"><button>JHS 2</button></a></option>
                 <option value="JHS3"><a href="kg2.html"><button>JHS 3</button></a></option>
+                <option value="TPrimary"><a href="Class6.html"><button>All Primary</button></a></option>
+                <option value="TNursury"><a href="nursery2.html"><button>All Nursury</button></a></option>
+                <option value="TJHS"><a href="kg2.html"><button>All JHS</button></a></option>
             </select>
             </div>
         </div>
-        <div class="content">
-          <div id="inData">
-  <!--   student form data     -->
-          <div class="inputdata">
-            <form class="StudForm">
-                    <select id='classS'>
-                        <option>--Select Class--</option>
-                        <option value="Creche">Creche</option>
-                        <option value="nursery1">Nursery 1</option>
-                        <option value="nursery2">Nusery 2</option>
-                        <option value="primary1">Primary 1</option>
-                        <option value="primary2">Primary 2</option>
-                        <option value="primary3">Primary 3</option>
-                        <option value="primary4">Primary 4</option>
-                        <option value="primary5">Primary 5</option>
-                        <option value="primary6">Primary 6</option>
-                        <option value="jhs1">JHS 1</option>
-                        <option value="jhs2">JHS 2</option>
-                        <option value="jhs3">JHS 3</option>
-                    </select>
-                    <input type="text" id="name" placeholder="Full Name">
-                    <input type="number" id="age" placeholder="Age On Adm">
-                    <label for="dob">Date Of Birth</label>
-                    <input type="date" id="dob">
-            </form>
-          </div>
-            <div class="inputdata">
-              <form class="">
-                <div class="studinput">
-
-                  <label for="gender">Gender</label>
-                  <select id="gender">
-                      <option>Male</option>
-                      <option>Female</option>
-                  </select>
-                  <label for="image">Student-Image</label>
-                  <input type="file" id="image">
+        <div id="inData">
+<!--   student form data     -->
+        <div class="formDes">
+                <form class="StudForm">                     
+                        <select id='classS'>
+                            <option>--Select Class--</option>
+                            <option value="Creche">Creche</option>
+                            <option value="nursery1">Nursery 1</option>
+                            <option value="nursery2">Nusery 2</option>
+                            <option value="primary1">Primary 1</option>
+                            <option value="primary2">Primary 2</option>
+                            <option value="primary3">Primary 3</option>
+                            <option value="primary4">Primary 4</option>
+                            <option value="primary5">Primary 5</option>
+                            <option value="primary6">Primary 6</option>
+                            <option value="jhs1">JHS 1</option>
+                            <option value="jhs2">JHS 2</option>
+                            <option value="jhs3">JHS 3</option>
+                        </select>
+                        <input type="text" id="name" placeholder="Full Name">
+                        <input type="number" id="age" placeholder="Age On Adm">
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" id="dob">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <input type="file" id="image">
+                        
+                </form>
                 </div>
-              </form>
-            </div>
-          <div class="inputdata">
-            <!--  students Parent data      -->
-            <form class="ParentForm">
-                <input type="text" id="father" placeholder="Father">
-                <input type="text" id="mother" placeholder="Mother">
-                <input type="text" id="relationship" placeholder="Relationship">
-                <input type="text" id="father_job" placeholder="Father's Occupation">
-                <input type="text" id="mother_job" placeholder="Mother's Occupation">
-            </form>
-          </div>
-          <div class="inputdata">
-            <!--  students Location data  -->
-            <form class="LocationForm">
-                <input type="number" id="father_no" placeholder="Father's number">
-                <input type="number" id="mother_no" placeholder="Mother's number">
-                <input type="text" id="guardian" placeholder="Guardian">
-                <input id="guardian_no" type="number" placeholder="Guardian's No.">
-                <input type="text" id="guardianOcc" placeholder="Guardian Occupation">
-            </form>
-          </div>
-          <div class="inputdata">
-            <!-- students health and address form -->
-            <form class="VitalInfoForm">
-                <input type="text" id="NHIS" placeholder="NHIS">
-                <input type="text" id="Digi" placeholder="Digital Address">
-                <input type="number" id="plt" placeholder="PLT">
-                <input type="text" id="blk" placeholder="BLK">
-                <input type="text" id="area" placeholder="Area">
-            </form>
-          </div>
-              </div>
-        </div>
 
+        <!--  students Parent data      -->
+                <div class="formDes">
+                    <form class="ParentForm">
+                        <input type="text" id="father" placeholder="Father">
+                        <input type="text" id="mother" placeholder="Mother">
+                        <input type="text" id="relationship" placeholder="Relationship">
+                        <input type="text" id="father_job" placeholder="Father's Occupation">
+                        <input type="text" id="mother_job" placeholder="Mother's Occupation">
+                    </form>
+                </div>
+
+        <!--  students Location data  -->
+                <div class="formDes">
+                    <form class="LocationForm">
+                        <input type="number" id="father_no" placeholder="Father's number">
+                        <input type="number" id="mother_no" placeholder="Mother's number">
+                        <input type="text" id="guardian" placeholder="Guardian">
+                        <input id="guardian_no" type="number" placeholder="Guardian's No.">
+                        <input type="text" id="guardianOcc" placeholder="Guardian Occupation">
+                    </form>
+                </div>
+                <div class="formDes">
+                    <form class="LocationForm">
+                        <input type="text" id="NHIS" placeholder="NHIS">
+                        <input type="text" id="Digi" placeholder="Digital Address">
+                        <input type="number" id="plt" placeholder="PLT">
+                        <input type="text" id="blk" placeholder="BLK">
+                        <input type="text" id="area" placeholder="Area">
+                    </form>
+                </div>
+
+            </div>
     <!--   <script src="../DB/ddb.js"></script>-->
         <script src="../DB/db.js"></script>
-
+    
     </body>
 </html>
