@@ -3,10 +3,8 @@
 <head>
 
     <title>Willows Administrator</title>
-    <link rel="stylesheet" href="css/ui.css">
-    <link rel="stylesheet" href="css/calender.css">
-    <link href="font-awe/css/all.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./css/ui.css">
+    <link href="./awesome/css/all.css" rel="stylesheet">
 </head>
     <body>
 
@@ -140,7 +138,11 @@
                 </div>
               </div>
             </div>
-            <script src="scripts.js"></script>
+            <script>
+                window.$ = window.jQuery = require('jquery');
+            </script>
+            <script src="./DB/db.js"></script>
+            <!-- <script src="scripts.js"></script> -->
 <!--
         <script>
             require()

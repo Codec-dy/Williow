@@ -4,11 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Willows Administrator</title>
     <link rel="stylesheet" href="admit.css">
-    <link rel="stylesheet" href="../font-awe/css/all.css">
-    <script>
-        window.$ = window.jQuery = require('jquery');
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="../awesome/css/all.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../font-awe/css/all.css"> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 </head>
     <body>
@@ -21,13 +20,15 @@
         <div id="nav">
             <div class="btnclass">
                 <span id="admNo"></span>
-                <button id="save" onclick="add()">Save</button>
+                <button id="save">Save</button>
                 <a href="crech_rep.html"><button onclick="info()">Preview Class</button o></a>
             <select id="classP">
                 <option value="">--Select Class to Preview--</option>
                 <option value="Creche">Creche</option>
                 <option value="Nursury1"><a href="nursery1.html"><button>Nursury1</button></a></option>
                 <option value="nursury2"><a href="nursery2.html"><button>Nursury2</button></a></option>
+                <option value="KG1"><a href="nursery2.html"><button>Kg1</button></a></option>
+                <option value="KG2"><a href="nursery2.html"><button>Kg2</button></a></option>
                 <option value="Primary1"><a href="Class1.html"><button>Class1</button></a></option>
                 <option value="Primary2"><a href="Class2.html"><button>Class2</button></a></option>
                 <option value="Primary3"><a href="Class3.html"><button>Class3</button></a></option>
@@ -46,12 +47,14 @@
         <div id="inData">
 <!--   student form data     -->
         <div class="formDes">
-                <form class="StudForm">                     
+                <form class="StudForm">
                         <select id='classS'>
                             <option>--Select Class--</option>
                             <option value="Creche">Creche</option>
-                            <option value="nursery1">Nursery 1</option>
-                            <option value="nursery2">Nusery 2</option>
+                            <option value="Nursery1">Nursery 1</option>
+                            <option value="Nursery2">Nusery 2</option>
+                            <option value="KG1">KG1</option>
+                            <option value="KG2">KG2</option>
                             <option value="primary1">Primary 1</option>
                             <option value="primary2">Primary 2</option>
                             <option value="primary3">Primary 3</option>
@@ -72,7 +75,7 @@
                             <option>Female</option>
                         </select>
                         <input type="file" id="image">
-                        
+
                 </form>
                 </div>
 
@@ -108,8 +111,11 @@
                 </div>
 
             </div>
+            <script>
+                window.$ = window.jQuery = require('jquery');
+            </script>
     <!--   <script src="../DB/ddb.js"></script>-->
         <script src="../DB/db.js"></script>
-    
+
     </body>
 </html>

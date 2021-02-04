@@ -18,13 +18,6 @@ function info(){
     localStorage['pas'] = document.getElementById('classP').value;
 }
 
-    
-
-
-//-----------------------------------------------
-//                  display
-//-----------------------------------------------
-
 request.onupgradeneeded = (e) => {
     console.log('done1');
     db = e.target.result;
@@ -43,9 +36,7 @@ let showStudents = () => {
     console.log("test " + db);
     let objectStore;
     objectStore  = db.transaction(localStorage['pas']).objectStore(localStorage['pas']);
-    
 //    let nowE = document.getElementById("nowE");
-    
     objectStore.openCursor().onsuccess = (e) => {
         let cursor = e.target.result;
         console.log(cursor);
@@ -76,8 +67,7 @@ Grabbing the form to create the row with cells
 /*
 Creating row and inserting cells
 */
-            
-            
+
                 var newRow = row.insertRow(1);
                 console.log(newRow);
                 //inserting cells per each input
@@ -93,9 +83,6 @@ Creating row and inserting cells
                 var cell7 = newRow.insertCell(7);
                 var cell8 = newRow.insertCell(8);
                 var cell9 = newRow.insertCell(9);
-               // var cell10 = newRow.insertCell(9);
-                // var cell11 = newRow.insertCell(10);
-                // var cell12 = newRow.insertCell(11);
 
 /*
 Inserting fetched data into individually created cells
@@ -109,14 +96,9 @@ Inserting fetched data into individually created cells
                 cell7.innerHTML = Area;
                 cell8.innerHTML = Blk;
                 cell9.innerHTML = Plt;
-                //cell10.innerHTML = ent;
-                // cell10.innerHTML = fO;
-                // cell11.innerHTML = mO;
-                // cell12.innerHTML = fn;
             cursor.continue();
-            
+
         }
-//        console.log("done view");
 
     };
 };
@@ -133,12 +115,12 @@ Inserting fetched data into individually created cells
                             if (cursor.value.id===id) {
                                 objectStore.delete(id);
                             }
-                            cursor.continue();  
+                            cursor.continue();
                         }
-                    }   
-            }); 
+                    }
+            });
             setTimeout(function() {
-                location.reload();   
+                location.reload();
             },500)
         });
 
@@ -177,7 +159,7 @@ Inserting fetched data into individually created cells
                     $("#gBLK").text(info.BLK)
                     $("#gArea").text(info.Area)
                     $(".cover").show()
-                    $("#personal").show()   
+                    $("#personal").show()
                     //Edit
                     $("#eNam").val(info.Name)
                     $("#eGender").val(info.Gender)
@@ -194,18 +176,18 @@ Inserting fetched data into individually created cells
                     $("#eBLK").val(info.BLK)
                     $("#eArea").val(info.Area)
                     $(".cover").show()
-                    $("#personal").show()  
+                    $("#personal").show()
                     $("#info1").hide()
-                    $("#info").show() 
+                    $("#info").show()
                 }
-                cursor.continue();  
+                cursor.continue();
             }
             }
     });
     $(".cover").click(function(){
         $(this).hide();
         $("#personal").hide()
-    });  
+    });
     $("#editt").click(function(){
         $("#info").toggle();
         $("#info1").toggle();
@@ -251,7 +233,7 @@ Inserting fetched data into individually created cells
                         $("#eBLK").val(info.BLK)
                         $("#eArea").val(info.Area)
                         $(".cover").show()
-                        $("#personal").show()   
+                        $("#personal").show()
 
                     }
                 }
@@ -262,4 +244,3 @@ Inserting fetched data into individually created cells
         $("#info1").show()
     });
     }, 2000);
-    

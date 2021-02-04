@@ -5,9 +5,9 @@
     <title>Willows Administrator</title>
     <link rel="stylesheet" href="admit.css">
     <!-- <link rel="stylesheet" href="print.css" type="text/css"/> -->
-    <link rel="stylesheet" href="../font-awe/css/all.css">
-    <link href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <script src="../jquery.js"></script>
+    <link rel="stylesheet" href="../awesome/css/all.css">
+    <!-- <link href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css"> -->
+    <!-- <script src="../jquery.js"></script> -->
 </head>
     <body>
         <div class="header">
@@ -18,14 +18,16 @@
         </div>
         <div id="nav">
             <div class="btnclass">
-                <button type="button" value="Back" onclick="history.go(-1)">Back</button>            
+                <button type="button" value="Back" onclick="history.go(-1)">Back</button>
                 <button type="button" onclick="printDiv();">Print</button>
                     <a href="crech_rep.html"><button onclick="info()">Preview Class</button o></a>
             <select id="classP">
                <option value="">--Select Class to Preview--</option>
                <option value="Creche">Creche</option>
-                <option value="Nursury1"><a href="nursery1.html"><button>Nursury1</button></a></option>
-                <option value="Nursury2"><a href="nursery2.html"><button>Nursury2</button></a></option>
+                <option value="Nursery1"><a href="nursery1.html"><button>Nursury1</button></a></option>
+                <option value="Nursery2"><a href="nursery2.html"><button>Nursury2</button></a></option>
+                <option value="KG1"><a href="nursery2.html"><button>Kg1</button></a></option>
+                <option value="KG2"><a href="nursery2.html"><button>Kg2</button></a></option>
                 <option value="Primary1"><a href="Class1.html"><button>Class1</button></a></option>
                 <option value="Primary2"><a href="Class2.html"><button>Class2</button></a></option>
                 <option value="Primary3"><a href="Class3.html"><button>Class3</button></a></option>
@@ -36,7 +38,7 @@
                 <option value="JHS2"><a href="kg2.html"><button>JHS 2</button></a></option>
                 <option value="JHS3"><a href="kg2.html"><button>JHS 3</button></a></option>
                 <option value="TPrimary"><a href="Class6.html"><button>All Primary</button></a></option>
-                <option value="TNursury"><a href="nursery2.html"><button>All Nursury</button></a></option>
+                <option value="TNursery"><a href="nursery2.html"><button>All Nursury</button></a></option>
                 <option value="TJHS"><a href="kg2.html"><button>All JHS</button></a></option>
             </select>
             </div>
@@ -67,7 +69,7 @@
         </table>
         </div>
         </div>
-        
+
         <!--        <script src="../DB/db.js"></script>-->
         <div class="cover"></div>
         <div id="personal">
@@ -111,9 +113,11 @@
 <div><span>Area:</span><input id="eArea" type="text"></div>
 </div>
 </div>
+<script>
+    window.$ = window.jQuery = require('jquery');
+</script>
 <script src="searchindex.js"></script>
 <script src="printdata.js"></script>
 <script src="../DB/ddb.js"></script>
 </body>
 </html>
-
